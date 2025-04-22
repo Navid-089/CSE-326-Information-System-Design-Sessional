@@ -4,7 +4,7 @@ This document outlines the steps taken to install and configure the ChirpStack N
 
 --- 
 
-## Prerequisites: 
+# Prerequisites
     All the ports used need to be open in the aws security group.
 
 --- 
