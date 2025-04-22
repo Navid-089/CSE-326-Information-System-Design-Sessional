@@ -1,4 +1,4 @@
-# ChirpStack Network Server Setup Documentation
+# ChirpStack Network Server Setup 
 
 This document outlines the steps taken to install and configure the ChirpStack Network Server on Ubuntu.
 
