@@ -9,11 +9,12 @@ Install the necessary dependencies:
 
 ```bash
 sudo apt install \
-    mosquitto \              
-    mosquitto-clients \      
-    redis-tools \           
-    postgresql              
-```
+    mosquitto \
+    mosquitto-clients \
+    redis-server \
+    redis-tools \
+    postgresql
+
 
 ---
 
