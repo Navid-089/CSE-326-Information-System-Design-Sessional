@@ -135,3 +135,59 @@ sudo systemctl restart chirpstack-gateway-bridge
 
 ---
 
+## 8. Access ChirpStack Web UI
+
+Open a browser and visit:
+```
+http://<your-ec2-public-ip>:55555 # the port it's listening to
+```
+
+Default login:
+- Username: `admin`
+- Password: `admin`
+
+---
+
+## 9. Adding Gateway in ChirpStack
+
+1. Navigate to the "Gateways" tab on the left panel.
+2. Click "+ Create Gateway".
+3. Fill in:
+   - Gateway ID (match the ID of your gateway)
+   - Gateway name
+   - Network Server (usually only one option)
+   - Frequency Plan (e.g., `US915_0`)
+   - Add location coordinates (optional)
+4. Click "Create gateway"
+
+---
+
+## 10. Creating Device Profile
+
+1. Navigate to "Device Profiles"
+2. Click "+ Create"
+3. Fill in:
+   - Name: `Your device type`
+   - LoRaWAN MAC Version: `1.0.3` or what your device supports
+   - Regional Parameters: e.g., `RP002-1.0.3` and `US915`
+   - Other options like ADR, Class B/C support
+4. Click "Create device-profile"
+
+---
+
+## 11. Adding a Device
+
+1. Navigate to "Applications" → select or create one
+2. Go to "Devices" → Click "+ Create"
+3. Fill in:
+   - Device name
+   - Device EUI (match the node’s EUI)
+   - Device profile: select the one you created
+4. Click "Create device"
+5. After creation, go into the device and go to "Keys"
+6. Add Join EUI, AppKey etc. and save
+
+---
+
+✅ You are now ready to start sending data from the end-device!
+Check Live LoRaWAN Frames and Device Data tabs to debug and verify communication.
