@@ -139,7 +139,7 @@ sudo systemctl restart chirpstack-gateway-bridge
 
 Open a browser and visit:
 ```
-http://<your-ec2-public-ip>:55555 # the port it's listening to
+http://<your-ec2-public-ip>:55555   # the port it's listening to
 ```
 
 Default login:
@@ -168,9 +168,10 @@ Default login:
 2. Click "+ Create"
 3. Fill in:
    - Name: `Your device type`
-   - LoRaWAN MAC Version: `1.0.3` or what your device supports
-   - Regional Parameters: e.g., `RP002-1.0.3` and `US915`
-   - Other options like ADR, Class B/C support
+   - LoRaWAN MAC Version: `1.0.2` or what your device supports
+   - Regional Parameters: e.g., `US_915` and `US915(Channels 0-7 + 64)`
+   - Set Default ADR algorithm as ADR algorithm 
+   - Expected uplink interval: 10 secs
 4. Click "Create device-profile"
 
 ---
@@ -181,13 +182,12 @@ Default login:
 2. Go to "Devices" → Click "+ Create"
 3. Fill in:
    - Device name
-   - Device EUI (match the node’s EUI)
-   - Device profile: select the one you created
+   - Generate DevEUI and JoinEUI/AppEUI and update them in the code of the end nodes
+   - Device profile: select the one just created
 4. Click "Create device"
-5. After creation, go into the device and go to "Keys"
-6. Add Join EUI, AppKey etc. and save
+5. After creation, go into the device and go to "OTAA Keys"
+6. Generate AppKey and update them in the code of the end nodes
 
 ---
 
-✅ You are now ready to start sending data from the end-device!
 Check Live LoRaWAN Frames and Device Data tabs to debug and verify communication.
