@@ -55,10 +55,7 @@ Install required tools and add ChirpStack package repository:
 ```bash
 sudo apt install apt-transport-https dirmngr                 # Enable APT to fetch over HTTPS
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00  
-# Add ChirpStack repo to APT sources
-echo "deb https://artifacts.chirpstack.io/packages/4.x/deb stable main" | sudo tee /etc/apt/sources.list.d/chirpstack.list
-
-# Refresh package index
+echo "deb https://artifacts.chirpstack.io/packages/4.x/deb stable main" | sudo tee /etc/apt/sources.list.d/chirpstack.list          # Add ChirpStack repo to APT sources
 sudo apt update
 ```
 
