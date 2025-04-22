@@ -1,6 +1,6 @@
 # ChirpStack Network Server Setup and Adding Gateways and Devices 
 
-This document outlines the steps taken to install and configure the ChirpStack Network Server on Ubuntu in an EC2 server.
+This document outlines the steps taken to install and configure the ChirpStack Network Server on Ubuntu in an EC2 server. It also describes how to connect the gateways and devices to the Network and integrating the Network Server with Application Server.
 
 ---
 
