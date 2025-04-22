@@ -2,7 +2,12 @@
 
 This document outlines the steps taken to install and configure the ChirpStack Network Server on Ubuntu in an EC2 server. It also describes how to connect the gateways and devices to the Network and integrating the Network Server with Application Server.
 
----
+--- 
+
+## Prerequisites: 
+    All the ports used need to be open in the aws security group.
+
+--- 
 
 ## 1. Installing ChirpStack Requirements
 Install the necessary dependencies:
