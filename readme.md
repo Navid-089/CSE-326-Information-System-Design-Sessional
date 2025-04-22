@@ -109,7 +109,7 @@ sudo journalctl -f -n 100 -u chirpstack   # Live logs from ChirpStack process
 ---
 
 ## 6. Config File Replacements
-Replace the following files with your customized versions:
+Replace the following files with the files here in the repo:
 
 - `/etc/postgresql/16/main/pg_hba.conf` (for DB authentication config)
 - `/etc/chirpstack/chirpstack.toml` (main ChirpStack config)
