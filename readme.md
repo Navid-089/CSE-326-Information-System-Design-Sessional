@@ -115,8 +115,9 @@ Replace the following files with your customized versions:
 
 - PostgreSQL DSN in `chirpstack.toml` matches your DB user/pass/port:
   ```toml
-  dsn = "postgres://chirpstack:chirpstack@localhost:5433/chirpstack?sslmode=disable"
-  ```
+  dsn = "postgres://chirpstack:chirpstack@localhost:5433/chirpstack?sslmode=disable" 
+  ## postgresql's port can be found by: sudo grep port /etc/postgresql/*/main/postgresql.conf
+    ```
 - Region name in `[network]` matches enabled gateway region:
   ```toml
   enabled_regions = ["us915_0"]
