@@ -9,11 +9,10 @@ Install the necessary dependencies:
 
 ```bash
 sudo apt install \
-    mosquitto \              # MQTT broker used for communication between components
-    mosquitto-clients \      # Command-line tools to test MQTT publish/subscribe
-    redis-server \           # In-memory data store for device queues and sessions
-    redis-tools \            # CLI tools for managing Redis
-    postgresql               # SQL database for ChirpStack data
+    mosquitto \              
+    mosquitto-clients \      
+    redis-tools \           
+    postgresql              
 ```
 
 ---
@@ -49,8 +48,7 @@ Install required tools and add ChirpStack package repository:
 
 ```bash
 sudo apt install apt-transport-https dirmngr                 # Enable APT to fetch over HTTPS
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00  # Add GPG key
-
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1CE2AFD36DBCCA00  
 # Add ChirpStack repo to APT sources
 echo "deb https://artifacts.chirpstack.io/packages/4.x/deb stable main" | sudo tee /etc/apt/sources.list.d/chirpstack.list
 
@@ -64,7 +62,7 @@ sudo apt update
 Install the Gateway Bridge service:
 
 ```bash
-sudo apt install chirpstack-gateway-bridge      # Gateway Bridge receives LoRa packets from gateways
+sudo apt install chirpstack-gateway-bridge     
 ```
 
 Edit its configuration:
@@ -113,7 +111,7 @@ Replace the following files with your customized versions:
 - `/etc/postgresql/16/main/pg_hba.conf` (for DB authentication config)
 - `/etc/chirpstack/chirpstack.toml` (main ChirpStack config)
 
-Make sure to verify:
+## 7. Verifications if error occurs
 
 - PostgreSQL DSN in `chirpstack.toml` matches your DB user/pass/port:
   ```toml
